@@ -1,0 +1,13 @@
+[Unit]
+Description=V4L2 RTSP server
+After=network.target
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=5
+ExecStart=/home/ubuntu/v4l2rtspserver/v4l2rtspserver -W 1024 -H 768 -F 15 -P 8554 /dev/video0
+WorkingDirectory=/home/ubuntu/v4l2rtspserver
+
+[Install]
+WantedBy=multi-user.target
