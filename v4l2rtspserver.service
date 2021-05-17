@@ -6,7 +6,7 @@ After=network.target
 Type=simple
 Restart=always
 RestartSec=5
-ExecStart=/home/ubuntu/v4l2rtspserver/v4l2rtspserver -W 1024 -H 768 -F 15 -P 8554 /dev/video0
+ExecStart=/usr/bin/python3 /home/ubuntu/v4l2rtspserver/main.py
 WorkingDirectory=/home/ubuntu/v4l2rtspserver
 User=root
 
